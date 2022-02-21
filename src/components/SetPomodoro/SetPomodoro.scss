@@ -1,0 +1,39 @@
+.form-container {
+    text-align: center;
+
+    .input-wrapper {
+        margin: 54px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: 523px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            font-size: 19px;
+
+            .input {
+                color: white;
+                background-color: #242526;
+                width: 150px;
+                height: 90px;
+                border-radius: 10%;
+                padding: 10px 20px;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

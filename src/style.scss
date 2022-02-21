@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+$Roboto_Font: 'Roboto Mono', monospace;
+$Press_Font: 'Press Start 2P', cursive;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$bg-color: #18191a;
+$dark: #242526;
+$primary: #2374e1;
+$danger: #e41e3f;
+$success: #45bd62;
+$warning: #f7b928;
+$grey: #3a3b3c;
+$info: rgba(78, 108, 231, 0.52);
+$white: #ffffff;
+
+body {
+  height: 100vh;
+  background-color: $bg-color;
+  color: $white;
+  font-family: $Roboto_Font;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 0;
+
+  .title {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .labels {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
+    background-color: $dark;
+    border-radius: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .active-label {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  // Start Timer container => CountdownAnimation
+  .timer-container {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+    .time-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 240px;
+      width: 240px;
+      border-radius: 50%;
+      background-color: $dark;
+      box-shadow: 1rem 1.5rem 2rem rgba(0,0,0,0.6);
+      font-size: 35px;
+      font-family: $Press_Font;
+    }
+  }
+  // End Timer container => CountdownAnimation
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+
+    .btn.active {
+      color: $white;
+      background-color: $primary;
+    }
+  } 
+
+}
