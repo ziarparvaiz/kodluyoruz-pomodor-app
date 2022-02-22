@@ -1,6 +1,8 @@
 # Kodluyoruz | Pomodoro App
 
 ![](./src/img/screenshot.png)
+![](./src/img/todolist-screenshot.png)
+
 ## Installation & Setup
 
 ```bash
