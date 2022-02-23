@@ -2,6 +2,7 @@
 
 ![](./src/img/screenshot.png)
 ![](./src/img/todolist-screenshot.png)
+![](./src/img/teampopup-screenshot.png)
 
 ## Installation & Setup
 
