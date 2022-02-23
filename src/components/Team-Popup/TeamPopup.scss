@@ -1,0 +1,158 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0, 0.2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popup-inner {
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    max-width: 440px;
+    background-color: #242526;
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        cursor: pointer;
+      }
+
+      .close-btn {
+        width: 30px;
+        max-width: 30px !important;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: white;
+
+        svg {
+          width: 25px;
+          height: 25px;
+          max-width: 25px;
+          cursor: pointer;
+          transition: 250ms all;
+
+          &:hover {
+            color: #e41e3f;
+          }
+        }
+      }
+    }
+
+    .popup-content {
+      display: flex;
+      flex-direction: column;
+
+
+      .team-members {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .member {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; 
+
+          .member-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .member-img {
+              width: 50px;
+              min-width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              border: 2px solid rgba(78, 108, 231, 0.52);
+              transition: 250ms all;
+              cursor: pointer;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+
+              &:hover {
+                border: 2px solid #2374e1;
+              }
+
+            }
+
+            .member-name {
+              color: white;
+              font-size: 19px;
+              font-weight: 600;
+              transition: 250ms all;
+
+              &:hover {
+                color: #2374e1;
+              }
+            }
+
+          }
+
+          .member-follower {
+            width: 30px;
+            max-width: 30px;
+            height: 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2374e1;
+            transition: 250ms all;
+
+            &:hover {
+              color: rgba(78, 108, 231, 0.52);
+
+            }
+
+            svg {
+              width: 20px;
+              height: 20px;
+              max-width: 20px;
+            }
+          }
+
+        }
+      }
+
+      .sourcs-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: white;
+        background-color: rgba(78, 108, 231, 0.52);
+        height: 40px;
+        transition: 250ms all;
+
+        &:hover {
+          background-color: #2375e1d7;
+        }
+
+      }
+
+    }
+
+  }
+}
