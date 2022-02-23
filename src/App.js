@@ -4,7 +4,10 @@ import CountdownAnimation from './components/CountdownAnimation'
 import SetPomodoro from './components/SetPomodoro/SetPomodoro'
 import { SettingsContext } from './context/SettingsContext'
 import { RiTeamFill } from 'react-icons/ri'
+import { FcTodoList } from 'react-icons/fc'
 import TeamPopup from "./components/Team-Popup/TeamPopup";
+import TodoPopup from './components/TodoPopup/TodoPopup'
+
 const App = () => {
 
   const {
@@ -19,8 +22,9 @@ const App = () => {
     SettingsBtn } = useContext(SettingsContext)
 
     useEffect(() => {updateExecute(executing)}, [executing, startAnimate, updateExecute])
-    const [buttonPopup, setButtonPopup ] = useState
-    (false)
+    const [buttonPopup, setButtonPopup ] = useState(false)
+    const [todoPopup, setTodoPopup] = useState(false)
+
 
   return (
     <div className="container">
@@ -68,14 +72,23 @@ const App = () => {
           <Button title="Pause" activeClass={startAnimate ? 'active' : undefined} _callback={pauseTimer} />
         </div>
       </> : <SetPomodoro />}
-      <button className="team-popup" 
-onClick={() => setButtonPopup(true)}>
-  <RiTeamFill />
-</button>
-  <TeamPopup
-      trigger = {buttonPopup}
-      setTrigger = {setButtonPopup}
-  />
+
+      <button className="team-popup" onClick={() => setButtonPopup(true)}>
+        <RiTeamFill />
+       </button>
+        <TeamPopup
+          trigger = {buttonPopup}
+          setTrigger = {setButtonPopup}
+        />
+
+      <button className='todo_popup' onClick={() => setTodoPopup(true)}>
+          <FcTodoList />
+       </button>
+        <TodoPopup 
+          trigger = {todoPopup}
+          setTrigger = {setTodoPopup}
+        />
+
     </div>
   )
 }

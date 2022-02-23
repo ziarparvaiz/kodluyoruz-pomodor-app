@@ -98,6 +98,7 @@ body {
       background-color: $primary;
     }
   } 
+
 // Start Team Popup Icon
 .team-popup {
   position: fixed;
@@ -121,4 +122,35 @@ body {
   }
 }
 // End Team Popup Icon
+
+  .todo_popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    max-width: 60px;
+    height: 60px;
+    background-color: $dark;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 250ms all;
+    
+
+    svg {
+      width: 25px;
+      max-width: 25px;
+      height: 25px;
+
+    }
+
+    &:hover {
+      border: 1px solid $primary;
+      background-color: $grey;
+      cursor: pointer;
+    }
+  }
+
+
 }
